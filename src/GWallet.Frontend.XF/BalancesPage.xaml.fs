@@ -276,13 +276,13 @@ type BalancesPage(state: FrontendHelpers.IGlobalAppState,
                 async {
                     let! balanceUpdates = allBalanceUpdates
                     if balanceUpdates.Any(fun maybeImminentPayment ->
-                        Option.exists (fun immPayment -> immPayment) maybeImminentPayment
+                        Option.exists id maybeImminentPayment
                     ) then
                         this.NoImminentIncomingPayment <- false
                     elif (not onlyReadOnlyAccounts) &&
                           balanceUpdates.All(fun maybeImminentPayment ->
                         maybeImminentPayment.IsNone ||
-                            Option.exists (fun immPayment -> not immPayment) maybeImminentPayment
+                            Option.exists not maybeImminentPayment
                     ) then
                         this.NoImminentIncomingPayment <- true
                 }
