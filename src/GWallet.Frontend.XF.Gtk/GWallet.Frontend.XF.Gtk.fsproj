@@ -9,7 +9,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>GWallet.Frontend.XF.Gtk</RootNamespace>
     <AssemblyName>GWallet.Frontend.XF.Gtk</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -221,6 +221,14 @@
     <ProjectReference Include="..\GWallet.Backend.NetStandard\GWallet.Backend.NetStandard.fsproj">
       <Project>{D1D192E0-F226-40AD-8D81-687F7E6F7DAB}</Project>
       <Name>GWallet.Backend.NetStandard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZXing.Net.Mobile\Source\ZXing.Net.Mobile.Forms.GTK\ZXing.Net.Mobile.Forms.GTK.csproj">
+      <Project>{7AA0ABCF-DBF1-4190-8E82-44DD736BE2F3}</Project>
+      <Name>ZXing.Net.Mobile.Forms.GTK</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZXing.Net.Mobile\Source\ZXing.Net.Mobile.GTK\ZXing.Net.Mobile.GTK.csproj">
+      <Project>{007476EF-D7CA-4198-BDED-3544D0EBD546}</Project>
+      <Name>ZXing.Net.Mobile.GTK</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(FSharpTargetsPath)" />
